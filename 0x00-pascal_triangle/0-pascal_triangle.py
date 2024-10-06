@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+
+""" 
+Question: Pascal's Triangle
+"""
 
 
 def pascal_triangle(n):
