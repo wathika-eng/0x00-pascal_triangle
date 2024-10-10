@@ -22,9 +22,12 @@ def canUnlockAll(boxes):
         return False
 
     keys = [0]
+    unlocked = set(keys)
+
     for key in keys:
         for box in boxes[key]:
-            if box not in keys and box < len(boxes):
+            if box not in unlocked and box < len(boxes):
+                unlocked.add(box)
                 keys.append(box)
 
-    return len(keys) == len(boxes)
+    return len(unlocked) == len(boxes)
